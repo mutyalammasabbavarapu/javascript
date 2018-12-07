@@ -1,0 +1,24 @@
+<html>
+<body>
+
+<input type="text" id="email"/>
+
+<button onclick="myFunction()">Try </button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var str = document.getElementById("email").value; 
+    var res = /^c/g.test(str);
+	var res2=/[0-9]{4}/.test(str);
+	var res3=/@caravel.ai$/.test(str);
+if(res&&!res2&&res3&&str.split("@caravel.ai")[0].length<=10)
+    document.getElementById("demo").innerHTML =str+ "-is valid";
+else
+  document.getElementById("demo").innerHTML =str+"-is not valid";
+} 
+</script>
+
+</body>
+</html>

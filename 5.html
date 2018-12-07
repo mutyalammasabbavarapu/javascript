@@ -1,0 +1,41 @@
+<html>
+<head>
+
+<title></title>
+<script type="text/javascript">
+var x = 0;
+var array=[1,2];
+
+function add_element_to_array()
+{
+ var ele = document.getElementById("text1").value;
+ //alert("Element: " + array[x] + " Added at index " + x);
+ array.push(ele);
+ document.getElementById("Result").innerHTML=array;
+}
+function remove_element_to_array()
+{
+	var ele = document.getElementById("text1").value;
+	var index=array.indexOf(ele);
+	if(index!==-1)
+	{
+		array.splice(index,1);
+		document.getElementById("Result").innerHTML=array;
+	}
+	else
+	{
+		alert("not found");
+	}
+}
+
+
+</script> 
+</head>
+<body>
+	<input type="text" id="text1"></input>
+<input type="button" id="button1" value="Add" onclick="add_element_to_array();"></input>
+<input type="button" id="button2" value="remove" onclick="remove_element_to_array();"></input>
+<div id="Result"></div>
+
+</body>
+</html>
